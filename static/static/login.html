@@ -1,0 +1,30 @@
+<html>
+
+<head>
+<title>Student Info App</title>
+    <link rel="stylesheet" type="text/css" href="/static/style1.css">
+</head>
+<body>
+    <div class="loginbox">
+    <img src="/static/images/avatar.png" class="avatar">
+        <h1>Login Here</h1>
+        <p><font color="red"> {{error}} </font> </p>
+        <form action ="/students/login" method="POST">{% csrf_token %}
+            <p>Email Id</p>
+            <input type="text" name="email" placeholder="Enter Email">
+            <p>Password</p>
+            <input type="password" name="pwd" placeholder="Enter Password">
+            <input type="submit" name="submit" value="Login">
+<ul>
+        <a href="/students/registration">Registration</a>
+        </ul>
+         <ul>
+        <a href="/students/forgot_password">Forgot Password</a>
+        </ul>
+        </form>
+
+    </div>
+
+</body>
+
+</html>
